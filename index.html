@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Consultant Services - Jaipur</title>
+    <style>
+        /* CSS Styling - Colors: Navy Blue, Gold, White */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0B192C;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #FFD700;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+        header p {
+            color: #FFD700;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .hero {
+            background: linear-gradient(rgba(11, 25, 44, 0.9), rgba(11, 25, 44, 0.9)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #e0e0e0;
+        }
+        .cta-btn {
+            background-color: #FFD700;
+            color: #0B192C;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            background-color: #ffffff;
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .about {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .about h3 {
+            color: #0B192C;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #0B192C;
+            transition: 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-top-color: #FFD700;
+        }
+        .service-card h3 {
+            color: #0B192C;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #f4f6f9;
+            padding-bottom: 10px;
+        }
+        .service-card ul {
+            list-style: none;
+        }
+        .service-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .service-card ul li::before {
+            content: "?";
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-weight: bold;
+        }
+        .form-section {
+            background: #0B192C;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .form-section h3 {
+            text-align: center;
+            color: #FFD700;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .submit-btn {
+            background-color: #FFD700;
+            color: #0B192C;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #ffffff;
+        }
+        footer {
+            background-color: #050C16;
+            color: #a0a0a0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        footer p {
+            margin-bottom: 5px;
+        }
+        footer strong {
+            color: #ffffff;
+        }
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>INFINITY CONSULTANT SERVICES</h1>
+        <p>Tax & Compliance | MSME Subsidies | Loan Solutions</p>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Your Trusted Business Growth Partner</h2>
+        <p>Accounting, Government Subsidies, and Easy Funding Solutions Under One Roof.</p>
+        <a href="https://wa.me/919079883885?text=Hello,%20I%20want%20to%20know%20about%20your%20services." class="cta-btn" target="_blank">Get Free Consultation</a>
+    </div>
+
+    <div class="container">
+        
+        <!-- About Us Section -->
+        <div class="about">
+            <h3>About Us</h3>
+            <p><strong>Infinity Consultant Services</strong> (Formerly Infinity Tax Advisory) is a premier consultancy firm based in Raja Park, Jaipur. Our core mission is to empower Small and Medium Enterprises (MSMEs) by providing reliable financial guidance, tax compliance, government subsidy management, and flexible business loans to take your business to the next level.</p>
+        </div>
+
+        <!-- Services Grid Section -->
+        <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h3>Tax & Compliance</h3>
+                <ul>
+                    <li>New GST Registration & Compliance</li>
+                    <li>Monthly & Quarterly GST Returns Filing</li>
+                    <li>Business & Individual Income Tax (ITR)</li>
+                    <li>MSME (Udyam) & Import Export Code (IEC)</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <h3>MSME Subsidies</h3>
+                <ul>
+                    <li>Machinery Purchase Subsidies</li>
+                    <li>Exhibition & E-Commerce Support</li>
+                    <li>Gems & Stone Industry Special Schemes</li>
+                    <li>Government Grants & Incentive Consulting</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <h3>Loan Solutions</h3>
+                <ul>
+                    <li>Business Loans & Working Capital</li>
+                    <li>Machinery Term Loans</li>
+                    <li>Collateral-Free (No Security) Loans</li>
+                    <li>Mudra and PMEGP Scheme Funding</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Lead Capture Form Section -->
+        <div class="form-section">
+            <h3>Check Your Eligibility</h3>
+            <form action="mailto:info@infinityconsultantservices.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="Name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" name="Business_Name" placeholder="Enter your business name">
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" name="Phone" placeholder="Enter your mobile number" required>
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select name="Service_Required">
+                        <option value="GST/Accounting">GST / ITR / Accounting</option>
+                        <option value="MSME Subsidy">MSME Subsidy Consultancy</option>
+                        <option value="Business Loan">Business / Machinery Loan</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit Details</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919079883885?text=Hello,%20I%20want%20to%20know%20about%20your%20services." class="whatsapp-float" target="_blank">??</a>
+
+    <!-- Footer Section -->
+    <footer>
+        <p><strong>Infinity Consultant Services</strong></p>
+        <p>Address: Raja Park, Jaipur, Rajasthan</p>
+        <p>Phone: +91 9079883885 | Email: info@infinityconsultantservices.com</p>
+        <p style="margin-top: 15px; font-size: 12px; color: #666;">&copy; 2026 Infinity Consultant Services. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
